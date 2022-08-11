@@ -7,7 +7,7 @@ public class Snakev2{
 		HashMap<Integer,String> map = new HashMap<Integer,String>();
 		HashMap<Integer,String> map2 = new HashMap<Integer,String>();
 		Scanner keyboard = new Scanner(System.in);
-		int board[][] = new int[5][5];
+		int board[][] = new int[6][6];
 		String[] k = new String[2];
 		int x=board.length/2,y=board.length/2,counter=1,counter2=counter,length=0,score=0;
 		int xdot=rand.nextInt(0,board.length),ydot=rand.nextInt(0,board.length);
@@ -88,7 +88,7 @@ public class Snakev2{
 
 			System.out.println(score);
 
-			if(counter>6 && (a.equals("") || a.equals("w") || a.equals("s") || a.equals("a") || a.equals("d"))){
+			if(counter>2 && (a.equals("") || a.equals("w") || a.equals("s") || a.equals("a") || a.equals("d"))){
 				k = map.get(length).split(",");
 				board[Integer.parseInt(k[0])][Integer.parseInt(k[1])]=0;
 				length++;
